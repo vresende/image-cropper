@@ -1,0 +1,30 @@
+{
+  "name": "vresnede/image-cropper",
+  "description": "It is a easy and simple PHP image cropper and cache thumb manager",
+  "keywords": [
+    "vresende",
+    "Upload",
+    "image thumb",
+    "image crop",
+    "image cache"
+  ],
+  "homepage": "http://www.foxmarketingdigital.com.br",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Vinicius R Santos",
+      "email": "vinicius@foxmarketingdigital.com.br",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "php": "^7.2",
+    "ext-gd": "*",
+    "ext-fileinfo": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "Vresende\\ImageCropper\\": "src"
+    }
+  }
+}
