@@ -63,7 +63,7 @@
          * @param int|null $height
          * @return null|string
          */
-        public function make(string $imagePath, int $width, int $height = null, string $imageName): ?string
+        public function make(string $imagePath, int $width, ?int $height = null, ?string $imageName): ?string
         {
             if (!file_exists($imagePath)) {
                 return "Image not found";
@@ -78,8 +78,6 @@
                 $this->imageName = hash("crc32", $this->imageInfo['basename']) . date("Ymd") . hash("crc32",
                         "{$width}{$height}") . ($this->imageMime == "image/jpeg" ? ".jpg" : ".png");
             }
-            $this->imageName = hash("crc32", $this->imageInfo['basename']) . date("Ymd") . hash("crc32",
-                    "{$width}{$height}") . ($this->imageMime == "image/jpeg" ? ".jpg" : ".png");
 
             if (!in_array($this->imageMime, self::$allowedExt)) {
                 return "Not a valid JPG or PNG image";
