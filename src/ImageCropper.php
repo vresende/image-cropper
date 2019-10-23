@@ -1,6 +1,6 @@
 <?php
 
-    namespace Vresende\Cropper;
+    namespace Vresende\ImageCropper;
 
     /**
      * Class Vresende ImageCropper
